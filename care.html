@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#8b4b58",
+                        "tertiary-fixed": "#e8e1e2",
+                        "surface-container": "#f5ece7",
+                        "on-surface": "#1e1b18",
+                        "surface-container-low": "#fbf2ed",
+                        "on-primary-container": "#5d2633",
+                        "tertiary-fixed-dim": "#ccc5c6",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#6f3441",
+                        "on-tertiary-fixed-variant": "#4a4647",
+                        "on-background": "#1e1b18",
+                        "on-secondary-fixed": "#062102",
+                        "surface-bright": "#fff8f5",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#ffb2bf",
+                        "inverse-primary": "#ffb2bf",
+                        "on-primary-fixed": "#390917",
+                        "secondary-fixed": "#caecb9",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#e1d8d4",
+                        "surface-tint": "#8b4b58",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#efe6e2",
+                        "inverse-on-surface": "#f8efea",
+                        "tertiary": "#625d5e",
+                        "primary-fixed": "#ffd9de",
+                        "tertiary-container": "#a6a0a1",
+                        "on-secondary-container": "#4d6a42",
+                        "on-tertiary-container": "#3b3738",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#48663e",
+                        "surface-container-highest": "#e9e1dc",
+                        "on-tertiary-fixed": "#1e1b1c",
+                        "on-surface-variant": "#524345",
+                        "inverse-surface": "#34302c",
+                        "outline": "#847375",
+                        "background": "#fff8f5",
+                        "surface": "#fff8f5",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#d7c1c4",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#aed09f",
+                        "primary-container": "#d88c9a",
+                        "on-secondary-fixed-variant": "#314e28",
+                        "secondary-container": "#c7eab7",
+                        "surface-variant": "#e9e1dc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Noto Serif"],
+                        "label-md": ["Plus Jakarta Sans"],"body-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #fff8f5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-stone-100 shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-rose-400">
+<span class="material-symbols-outlined" data-icon="local_florist">local_florist</span>
+<span class="text-2xl font-semibold text-rose-800 font-noto-serif italic">Petal &amp; Stem</span>
+</div>
+
+<div class="text-rose-400">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-7xl mx-auto px-6">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="relative rounded-3xl overflow-hidden h-[400px] flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A lush and serene close-up of fresh pastel roses and eucalyptus leaves covered in morning dew. The lighting is soft and ethereal, suggesting a high-end botanical greenhouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_rVQ2YoqJug1zbsaKgZ64ZEJug8JtrbG3NrxViFGryyuT9u4dICouJ1x20aHguYumiiBNd01Yj-zy9SATU-_5YZ-vFWs0JcRm3yd9GWEUfUDYH5AvWlmPqGm2tIRKhIwWerUCgmmJ6qCDBHr41xkIvBvrxScCABsSPoJE8g-BndnRt9pdsvKZ_oe9ETGR2JwxcG8isx3vvIecAhVhA86jQF23k01vyW0zVwybs7pQA_P_GTqF9_SlYMRntGrJVH3OgOk0TbwIFBM"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-headline-md text-display-lg text-white mb-4 drop-shadow-lg">Your Guide to Flower Care</h1>
+<p class="font-body-lg text-white/90 max-w-2xl mx-auto drop-shadow-md">Tips to maintain the freshness and beauty of your flowers for as long as possible.</p>
+</div>
+</div>
+</section>
+<!-- Bento Grid Care Guide -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+<!-- Watering Section -->
+<div class="md:col-span-8 bg-white p-10 rounded-[2rem] shadow-sm shadow-emerald-900/5 border border-stone-100 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-secondary"><span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Water: The Lifeline</h2>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6">Water is the most important element for keeping flowers alive. Frequency and quantity are key.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Change water every two days to keep it clean.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Use lukewarm water for faster absorption.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Cut stems at a 45-degree angle to increase absorption surface.</span>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-64 h-64 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A minimalist aesthetic shot of a clear glass vase being filled with fresh water." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2sS7IhhdampcroSVsHaNnNuGij1zrSA0QL6QfTC5UYZE-lZ2znTDYDppKtxJbJd2ZnuxobAPoaqoAhgTu-0UgOrTGliDYD08b_nIdW80VUvBiMe3QWPdh5yEqOylsUo1KraOEjtkLzFKxWxid-Nhmcd99jEzFzLxYcIO1rj0ACoZgzwx14_4hp13JXDzOwVDqqd3k7FV3JKDd1j4tQNRwxwVoNF_LzmFKgoHwN2A-67MO6Eat3L89teTyI3IDwHDPH3eVPREZ_c"/>
+</div>
+</div>
+<!-- Lighting Section -->
+<div class="md:col-span-4 bg-surface-container-low p-10 rounded-[2rem] shadow-sm shadow-emerald-900/5 border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container mb-6">
+<span class="material-symbols-outlined" data-icon="light_mode">light_mode</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4">Ideal Lighting</h2>
+<p class="font-body-md text-on-surface-variant mb-6">Light is food, but excessive heat is the enemy of delicate petals.</p>
+<div class="space-y-4">
+<div class="p-4 bg-white/50 rounded-xl">
+<p class="font-label-md text-primary mb-1">Preferred Spot</p>
+<p class="font-body-md">Bright, indirect light near a window is best.</p>
+</div>
+<div class="p-4 bg-white/50 rounded-xl">
+<p class="font-label-md text-primary mb-1">Avoid Heat</p>
+<p class="font-body-md">Keep away from direct sunlight or hot AC vents.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Tips Section -->
+<div class="md:col-span-12 bg-surface-container p-12 rounded-[2.5rem] relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-lg text-primary mb-6">Golden Tips</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Expert florist secrets to extend the life of your bouquet for several extra days.</p>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="content_cut">content_cut</span>
+<div>
+<h4 class="font-label-md text-primary">Clean Stems</h4>
+<p class="font-body-md text-on-surface-variant">Remove any leaves below the water line to prevent rot.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<div>
+<h4 class="font-label-md text-primary">Specialized Food</h4>
+<p class="font-body-md text-on-surface-variant">Use the flower food provided with the bouquet.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="ac_unit">ac_unit</span>
+<div>
+<h4 class="font-label-md text-primary">Cool Atmosphere</h4>
+<p class="font-body-md text-on-surface-variant">Flowers prefer cool places; avoid placing them near electronics that emit heat.</p>
+</div>
+</div>
+</div>
+</div><div class="grid grid-cols-2 gap-4">
+<img class="rounded-2xl h-64 w-full object-cover shadow-lg" data-alt="Close-up photography of professional florists' hands carefully trimming a rose stem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgRU87OovAU2YZ33tWE9woNPdQhRGjmE2iNPuMRr0ifVLyQ-aNDYx8j46DfsZvVjwHFyvi8NrO0WlfoLQTsKiyBRF_yKDSkKFm1pS6Z6DoRf-ltKTqihYpWprZS95K63W0daDdWWosyXAAzvl7OM6Nq2N38o2gbEz83s3aPGbxAzd951HvEqS_NwlDe-W3sJge3wC5npDCXlYxrpJWcDZ-bT3BHwklAYeLQzLrI8mionndpvT46MHWViwWTX30j5SCjQmGjJTUho"/>
+<img class="rounded-2xl h-64 w-full object-cover mt-8 shadow-lg" data-alt="An artistic shot of multiple colorful flowers in a clean glass vase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9L1Nbh5ducZx4PvTWcT9P6fM-4bRRDdV2Gvmhl7zYbD0U52rqwfudsv4OpiMKKmiWRpFRmbMxoQcN9ZbWSoqYUvyUOc-ea4MWESabVUgIcwUDZbACRqdnHTVy4Bef4dBuqPDUuoJak8EFmAOOoDfeKCz1TNdTjEIzGSQqoPivNXo2P1js86zy3YZJBBdMLZ6HFEiAuP9wuYSSpHbpW2IYkKk40CPXzTrU6fXlgTOamOJvEFJOIP9a12mwxlDiA-mhgaHFyO46Z-s"/>
+</div>
+</div>
+<!-- Abstract decoration -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-rose-100/30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 pb-safe bg-white/80 backdrop-blur-xl border-t border-emerald-900/10 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden z-50 rounded-t-2xl">
+<button class="flex flex-col items-center justify-center text-stone-400 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-stone-400 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="filter_vintage">filter_vintage</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Flowers</span>
+</button>
+<button class="flex flex-col items-center justify-center text-rose-800 font-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Care</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto border-t border-stone-200 bg-stone-50">
+<div class="flex flex-col gap-2">
+<span class="text-xl font-bold italic text-rose-800 font-noto-serif">Petal &amp; Stem</span>
+<p class="font-noto-serif text-sm leading-relaxed text-stone-600">© 2024 Petal &amp; Stem. Cultivated with care.</p>
+<div class="fixed bottom-0 left-0 w-full bg-white border-t shadow-md">
+  <div class="flex justify-around py-3 text-sm">
+
+    <a href="home.html" class="flex flex-col items-center text-gray-700">
+      <span class="material-symbols-outlined">home</span>
+      HOME
+    </a>
+
+    <a href="folwers.html" class="flex flex-col items-center text-gray-400">
+      <span class="material-symbols-outlined">local_florist</span>
+      FLOWERS
+    </a>
+
+<a href="care.html" class="text-rose-700">      <span class="material-symbols-outlined">potted_plant</span>
+      CARE
+    </a>
+
+  </div>
+</div>
+</div>
+
+</footer>
+</body></html>

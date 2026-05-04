@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#8b4b58",
+                      "tertiary-fixed": "#e8e1e2",
+                      "surface-container": "#f5ece7",
+                      "on-surface": "#1e1b18",
+                      "surface-container-low": "#fbf2ed",
+                      "on-primary-container": "#5d2633",
+                      "tertiary-fixed-dim": "#ccc5c6",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#6f3441",
+                      "on-tertiary-fixed-variant": "#4a4647",
+                      "on-background": "#1e1b18",
+                      "on-secondary-fixed": "#062102",
+                      "surface-bright": "#fff8f5",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#ffb2bf",
+                      "inverse-primary": "#ffb2bf",
+                      "on-primary-fixed": "#390917",
+                      "secondary-fixed": "#caecb9",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#e1d8d4",
+                      "surface-tint": "#8b4b58",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#efe6e2",
+                      "inverse-on-surface": "#f8efea",
+                      "tertiary": "#625d5e",
+                      "primary-fixed": "#ffd9de",
+                      "tertiary-container": "#a6a0a1",
+                      "on-secondary-container": "#4d6a42",
+                      "on-tertiary-container": "#3b3738",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#48663e",
+                      "surface-container-highest": "#e9e1dc",
+                      "on-tertiary-fixed": "#1e1b1c",
+                      "on-surface-variant": "#524345",
+                      "inverse-surface": "#34302c",
+                      "outline": "#847375",
+                      "background": "#fff8f5",
+                      "surface": "#fff8f5",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#d7c1c4",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#aed09f",
+                      "primary-container": "#d88c9a",
+                      "on-secondary-fixed-variant": "#314e28",
+                      "secondary-container": "#c7eab7",
+                      "surface-variant": "#e9e1dc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin": "32px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Noto Serif"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-sm": ["Noto Serif"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "display-lg": ["Noto Serif"]
+              },
+              "fontSize": {"headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(255, 248, 245, 0.4), rgba(255, 248, 245, 0.4)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .backdrop-blur-md { backdrop-filter: blur(12px); }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        html {
+  scroll-behavior: smooth;
+}
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-stone-100 shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-400" data-icon="local_florist">local_florist</span>
+<h1 class="text-2xl font-semibold text-rose-800 font-headline-md italic">Petal &amp; Stem</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a href="#home">Home</a>
+<a href="#flowers">Flowers</a>
+<a href="#care">Care</a></nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-400" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section id="home" class="relative h-[751px] ..."><div class="absolute inset-0 hero-gradient" data-alt="A luxurious close-up of a premium floral arrangement featuring soft pink ranunculus and cream roses with delicate eucalyptus leaves."></div>
+<div class="relative z-10 text-center px-6 max-w-3xl">
+<h2 class="font-headline-md text-display-lg text-primary mb-6 leading-tight">Floral Beauty in Every Corner</h2>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">Handcrafted bouquets to brighten your day and express your feelings.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md hover:bg-on-primary-fixed-variant transition-all shadow-lg shadow-primary/20">Shop Now</button>
+<button class="bg-white/80 backdrop-blur-sm text-primary border border-primary/20 px-10 py-4 rounded-full font-label-md hover:bg-surface-container transition-all">Explore Collection</button>
+</div>
+</div>
+</section>
+<!-- Introduction -->
+<section id="flowers" class="py-24 px-6 max-w-7xl mx-auto"><div class="max-w-4xl mx-auto text-center">
+<div class="mb-6 flex justify-center">
+<div class="w-16 h-[1px] bg-primary-container self-center"></div>
+<span class="mx-4 text-primary font-headline-sm italic">Welcome to Petal &amp; Stem</span>
+<div class="w-16 h-[1px] bg-primary-container self-center"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-8">Why Flowers Matter</h3>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">Flowers aren't just decor; they're a silent language for the soul. Studies show flowers reduce stress and boost creativity. At Petal &amp; Stem, we believe every petal holds a story of healing and beauty.
+            </p>
+</div>
+</section>
+<!-- Asymmetric Image Gallery -->
+<section id="care" class="py-24 px-6 bg-stone-50"><h3 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Our Curated Collections</h3>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto md:h-[800px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sprawling horizontal composition of a vibrant spring bouquet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeX5iIOixhSV6uGMaw75ekqgp7bnshagu6P97KGd8MDkMpO9nWHlwESR_OMGkJ755JoSHqHZfk_AGRsO1DQzDTk-hPUmNLp9m7AaxojOSqokw793Ib0qV_j12FptaQH7YS69UhaJpiLWxxstCnld2kA-E9jf53gZifpsBGxuXUcwlChHjFvKBNrYs60IZLFEb5Rk0GKWIZ9Ek2WFfguFBBxJxXOsFqX4p9m0ZJ55p-ORMf5Mwrb7_ZSaDE0hf_X5NrjXVeiKvdBGw"/>
+<div class="absolute bottom-0 right-0 left-0 p-8 bg-gradient-to-t from-black/40 to-transparent text-white">
+<span class="font-label-md text-primary-fixed uppercase tracking-widest">Spring Season</span>
+<h4 class="font-headline-sm text-2xl mt-2">Morning Dew Bouquet</h4>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-8">
+<div class="group relative overflow-hidden rounded-2xl shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="White Lily Collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyk8VZ1jLsQiOeyiuSui8Gn2hy2qCN24-6r5kJtlo0GbvKp65eKI-YFMUznRVc9izFaiNiBgxAhQndqFMvwovHGKVcu-3WxkgckwUymdXvY-d27jX1-ggvfUfyq9HcWweV3neehNY2aMFjR8WYGb8ExhsyACoGgIHKyPqUIZh80nUSyftyKQ865GIVDXx7m4iK8jdldhk-kLpLi_fRA6WtmNW_9aZ9luNTZUWMvDafD9_au_KtCDFpSxk0YlFbOlu1eF77C6qos9w"/>
+<div class="absolute bottom-0 right-0 left-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h4 class="font-headline-sm text-xl">White Lily Collection</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Classic Red Roses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs7FaX7d4vOWfnZKVyce79TjL8EQqUJuLdFRMS_Sh0Tpz62i5SwWfRhaka1IjY8jyqaCBccCvP43dE-3fKivK8IavP0DDrdwKIa9e6e-4U1KvLaZhpCTDZWnn6xjpMqaxR5W2Y4_I0R7zE0Qi_p9lHyKbX5jBi7g4DtD_0v5eJkxddAOR6rKDEDFJ6aDykpdHYJnmkpSrnxsAD5F_3YR99x92tiGHh-QlGrafjeDLxVOmffbwnAukyIpCFs7sWbTc6p5Uz0PWpc1I"/>
+<div class="absolute bottom-0 right-0 left-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h4 class="font-headline-sm text-xl">Classic Red Roses</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Sections Cards -->
+<section class="py-24 px-6 bg-stone-50">
+<div class="max-w-7xl mx-auto">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Explore More</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Types Card -->
+<div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="filter_vintage">filter_vintage</span>
+</div>
+<h4 class="font-headline-sm text-on-primary-container mb-4">Types of Flowers</h4>
+<p class="font-body-md text-on-surface-variant mb-6">Discover rare and classic imported flowers.</p>
+<a class="text-primary font-label-md flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Browse Varieties <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+<!-- Care Card -->
+<div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="potted_plant">potted_plant</span>
+</div>
+<h4 class="font-headline-sm text-on-primary-container mb-4">Flower Care</h4>
+<p class="font-body-md text-on-surface-variant mb-6">Learn how to keep your blooms fresh for as long as possible.</p>
+<a class="text-secondary font-label-md flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Care Guide <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+<!-- Contact Card -->
+<div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="mail">mail</span>
+</div>
+<h4 class="font-headline-sm text-on-primary-container mb-4">Contact Us</h4>
+<p class="font-body-md text-on-surface-variant mb-6">We're here to help you choose the perfect gift for any occasion.</p>
+<a class="text-primary font-label-md flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Get in Touch <span class="material-symbols-outlined">arrow_right_alt</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative mt-auto bg-stone-50 border-t border-stone-200">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-xl font-bold italic text-rose-800 font-headline-md">Petal &amp; Stem</span>
+<p class="font-noto-serif text-sm leading-relaxed text-stone-600">© 2024 Petal &amp; Stem. Cultivated with care.</p>
+</div>
+<div class="fixed bottom-0 left-0 w-full bg-white border-t shadow-md">
+  <div class="flex justify-around py-3 text-sm">
+
+    <a href="home.html" class="flex flex-col items-center text-rose-700">
+      <span class="material-symbols-outlined">home</span>
+      HOME
+    </a>
+
+    <a href="folwers.html" class="flex flex-col items-center text-gray-400">
+      <span class="material-symbols-outlined">local_florist</span>
+      FLOWERS
+    </a>
+
+    <a href="care.html" class="flex flex-col items-center text-gray-400">
+      <span class="material-symbols-outlined">potted_plant</span>
+      CARE
+    </a>
+
+  </div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar -->
+
+</body></html>

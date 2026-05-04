@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#8b4b58",
+                    "tertiary-fixed": "#e8e1e2",
+                    "surface-container": "#f5ece7",
+                    "on-surface": "#1e1b18",
+                    "surface-container-low": "#fbf2ed",
+                    "on-primary-container": "#5d2633",
+                    "tertiary-fixed-dim": "#ccc5c6",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#6f3441",
+                    "on-tertiary-fixed-variant": "#4a4647",
+                    "on-background": "#1e1b18",
+                    "on-secondary-fixed": "#062102",
+                    "surface-bright": "#fff8f5",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#ffb2bf",
+                    "inverse-primary": "#ffb2bf",
+                    "on-primary-fixed": "#390917",
+                    "secondary-fixed": "#caecb9",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#e1d8d4",
+                    "surface-tint": "#8b4b58",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#efe6e2",
+                    "inverse-on-surface": "#f8efea",
+                    "tertiary": "#625d5e",
+                    "primary-fixed": "#ffd9de",
+                    "tertiary-container": "#a6a0a1",
+                    "on-secondary-container": "#4d6a42",
+                    "on-tertiary-container": "#3b3738",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#48663e",
+                    "surface-container-highest": "#e9e1dc",
+                    "on-tertiary-fixed": "#1e1b1c",
+                    "on-surface-variant": "#524345",
+                    "inverse-surface": "#34302c",
+                    "outline": "#847375",
+                    "background": "#fff8f5",
+                    "surface": "#fff8f5",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#d7c1c4",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#aed09f",
+                    "primary-container": "#d88c9a",
+                    "on-secondary-fixed-variant": "#314e28",
+                    "secondary-container": "#c7eab7",
+                    "surface-variant": "#e9e1dc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin": "32px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Noto Serif"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],"headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f5;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-stone-100 shadow-sm shadow-emerald-900/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-400" data-icon="local_florist">local_florist</span>
+<span class="text-2xl font-semibold text-rose-800 font-noto-serif italic">Petal &amp; Stem</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-rose-400 cursor-pointer" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="text-center mb-16 space-y-4">
+<h1 class="font-display-lg text-display-lg text-primary">Discover Our Flower Varieties</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Enjoy nature's beauty through our curated selection of rare and beautiful flowers, each telling a unique story.
+            </p>
+</header>
+<!-- Flower Types Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Item 1: Rose -->
+<section class="lg:col-span-12 flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest p-8 rounded-xl shadow-sm overflow-hidden">
+<div class="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden">
+<img alt="Red Rose" class="w-full h-full object-cover" data-alt="A lush, close-up photograph of deep velvet-red roses arranged in a soft editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Acl4G6aYe3x__JHreIkvwNxgjrvqp_i_ENOEnuwO9toPOZR9DHyr8GctdOHydHPyCBbY9lI6MqYmw2wFo4zpFO2VZew8tA-gVodhywrJ-pWdT2_0JVqxg7h6yWQCkHfx5niMJJB3ZEhFwrkjUDS1YvgMfyRI5ChGKlK5v8ez2RxajBYrj_6dAGxTNipmjMHvTq5T6WkaWLz9NWNSO428f1GDY6vnmet6kLpqnItT0jMQ7DlmRB38ATR9Yk5Y-Uig7nc5pUynX_M"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="space-y-2">
+<span class="text-label-md font-label-md text-secondary tracking-widest uppercase">The Timeless Classic</span>
+<h2 class="text-headline-md font-headline-md text-primary">Red Rose</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                        A symbol of elegance and eternal beauty. The rose is characterized by its layered petals and enchanting scent that fills the space with joy. It's the first choice for expressing love and appreciation.
+                    </p>
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary">Available colors:</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-label-md font-label-md border border-outline-variant text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-red-600"></span> Red
+                            </span><span class="px-4 py-2 bg-surface-container-high rounded-full text-label-md font-label-md border border-outline-variant text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-pink-400"></span> Pink
+                            </span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-label-md font-label-md border border-outline-variant text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-white border border-stone-200"></span> White
+                            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Item 2: Tulip -->
+<section class="lg:col-span-6 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-stone-100">
+<div class="w-full aspect-square overflow-hidden">
+<img alt="Tulip" class="w-full h-full object-cover" data-alt="A bright and airy composition of diverse tulips in vibrant yellow, deep purple, and vivid orange." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY7YvdbYUaiIU7g13SNNGJ1m0j5JlxxdiqD67aIw-hezlhW2cteBLIAWDCMHSgNwqguX1lhSIJb07hxptZeQd1CirJgXf1nt7dYz_DiggXOhg0fsZTLdnC8F889OlQYE-iPbv3ycqwBUs5iGTvpmtJQwKiq5AvP0azoIVs4P4_a2RXy7dWS01pfvgcTezw3qU5gEDAB2ii23e3l6EoaFgrvCtH20dQNNVAw9_mDN4aakGqormgmUm3lnbtgbYpE6_y2GQNpeWcrWw"/>
+</div>
+<div class="p-8 space-y-6">
+<div class="space-y-2">
+<span class="text-label-md font-label-md text-secondary tracking-widest uppercase">Spring Radiance</span>
+<h2 class="text-headline-sm font-headline-sm text-primary">Tulip</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Tulips bring a touch of freshness and vitality with their bright colors and sleek shapes. They express new beginnings and bright happiness.
+                    </p>
+<div class="space-y-2">
+<h3 class="font-label-md text-label-md text-primary">Available colors:</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">Yellow</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">Purple</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">Orange</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Item 3: Lily -->
+<section class="lg:col-span-6 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-stone-100">
+<div class="w-full aspect-square overflow-hidden">
+<img alt="Lily" class="w-full h-full object-cover" data-alt="Stunning white and soft pink lilies captured with exquisite detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQEZXx0H-2J9MlUygbAmJycetcUUblYbyCS729FDV8w6VBsWiwDQrBlYEGp6ZquIGvugtuLG-kn_kzGBQEXUJQVKYZ_nggF0lYCeL8qC2wzcxaEWNA2F9A-Gsfua40_Wud8OECKW6gi5vZIkotCExP3BPOPNOlWBoHhLfed1SIgOEeNAuDTxt2-5oPbag8K4qTGfBhr7_c_K3OBxFlR2yq872mcYjpxLDMHcjb321C4STgMFSEBBselJguZ4AJC9i25eVoulvszNg"/>
+</div>
+<div class="p-8 space-y-6">
+<div class="space-y-2">
+<span class="text-label-md font-label-md text-secondary tracking-widest uppercase">Purity and Fragrance</span>
+<h2 class="text-headline-sm font-headline-sm text-primary">Lily</h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Lilies are distinguished by their majestic beauty and aromatic scent that gives a feeling of purity and tranquility. A symbol of sophistication and serenity in every corner.
+                    </p>
+<div class="space-y-2">
+<h3 class="font-label-md text-label-md text-primary">Available colors:</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">White</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">Yellow</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg text-label-md font-label-md text-primary">Pink</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) --><nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 pb-safe bg-white/80 backdrop-blur-xl border-t border-emerald-900/10 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden z-50 rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-stone-400 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-rose-800 font-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="filter_vintage">filter_vintage</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Flowers</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="text-[10px] uppercase tracking-widest font-noto-serif">Care</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full relative mt-auto border-t border-stone-200 bg-stone-50">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-xl font-bold italic text-rose-800 font-noto-serif">Petal &amp; Stem</span>
+<p class="font-noto-serif text-sm leading-relaxed text-stone-600">© 2024 Petal &amp; Stem. Cultivated with care.</p>
+</div>
+<div class="fixed bottom-0 left-0 w-full bg-white border-t shadow-md">
+  <div class="flex justify-around py-3 text-sm">
+
+    <a href="home.html" class="flex flex-col items-center text-gray-700">
+      <span class="material-symbols-outlined">home</span>
+      HOME
+    </a>
+
+<a href="folwers.html" class="text-rose-700">   
+       <span class="material-symbols-outlined">local_florist</span>
+      FLOWERS
+    </a>
+
+    <a href="care.html" class="flex flex-col items-center text-gray-400">
+      <span class="material-symbols-outlined">potted_plant</span>
+      CARE
+    </a>
+
+  </div>
+</div>
+</div>
+</footer>
+</body></html>
